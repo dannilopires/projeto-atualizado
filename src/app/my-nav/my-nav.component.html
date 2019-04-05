@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang= "pt-br">
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+<mat-sidenav-container>
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar><div><a [href]="['/pg-inicio']"><img src="assets\img\compra-online-1.png" id="logo"></a></div> </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink] ="['/memoria']">Memória ram</a>
+      <a mat-list-item [routerLink] ="['/pla-video']">Placa de video</a>
+      <a mat-list-item [routerLink] ="['/pla-mae']">Placa mãe</a>
+      <a mat-list-item [routerLink] ="['/gabinete']">Gabinetes</a>
+      <a mat-list-item [routerLink] ="['/monitor']">Monitores</a>
+      <a mat-list-item [routerLink] ="['/processador']">Processadores</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div>
+        <nav>
+          <div class="nav-wrapper">
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required>
+                <label class="label-icon" id="pesquisa" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons"></i>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div>
+       <a class="waves-effect waves-light btn" id="login"><a [routerLink] = "['/login']"><i class="material-icons right">person_pin</i>Login</a></a>
+       <a class="waves-effect waves-light btn" id="carrinho"><a [routerLink] ="['/carrinho']"><i class="material-icons right">local_grocery_store</i>Carrinho</a></a>
+       <a class="waves-effect waves-light btn" id="desejos"><a [routerLink] ="['/desejos']"><i class="material-icons right">favorite_border</i>Desejos</a></a>
+    </div>
+    </mat-toolbar>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+</body>
+
+</html>

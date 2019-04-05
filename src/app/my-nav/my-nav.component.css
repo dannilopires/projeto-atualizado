@@ -1,0 +1,65 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background: linear-gradient(to right, blue,black);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  overflow-x: hidden;
+  background: linear-gradient(blue);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+  overflow-y: hidden; 
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: linear-gradient(to right, black, blue);
+}
+#carrinho{
+  position:relative;
+  top:-2px;
+  left:104px;
+}
+#login{
+  position: relative;
+  top: -2px;
+  left:309px;
+}
+#search{
+  position: relative;
+  left: 20px;
+  margin-top:-2px;
+  height: 30px;
+  width: 700px;
+}
+#pesquisa{
+  position: relative;
+  top: -2px;
+  left:20px;
+}
+#desejos{
+  position:relative;
+  top:-2px;
+  left:-124px;
+}
+#logo{
+  float: right;
+  border-radius: 62px;
+  padding: 2px;
+  width: 150px;
+  height: 60px;
+}
+
+
